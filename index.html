@@ -1,127 +1,202 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Backtestx | Professional Strategy Validation</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Backtestx | Professional Strategy Validation</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+
+<style>
+:root{
+ --bg-color:#0b0f1a;
+ --card-bg:#161b2c;
+ --primary:#3b82f6;
+ --text-main:#ffffff;
+ --text-dim:#94a3b8;
+ --success:#10b981;
+ --danger:#ef4444;
+}
+
+body.light{
+ --bg-color:#f8fafc;
+ --card-bg:#ffffff;
+ --text-main:#0f172a;
+ --text-dim:#64748b;
+}
+
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+ font-family:'Inter',sans-serif;
+ background:var(--bg-color);
+ color:var(--text-main);
+ line-height:1.6;
+ transition:.3s;
+}
+
+.container{max-width:1100px;margin:auto;padding:0 20px}
+
+/* NAV */
+.navbar{
+ display:flex;justify-content:space-between;align-items:center;
+ padding:30px 5%;
+}
+.logo{font-size:1.5rem;font-weight:800}
+.logo span{color:var(--primary)}
+.nav-links{display:flex;gap:25px;align-items:center;list-style:none}
+.nav-links a{text-decoration:none;color:var(--text-dim);font-weight:500}
+.nav-links a:hover{color:var(--text-main)}
+.theme-toggle{cursor:pointer;font-size:22px;background:none;border:none;color:var(--text-main)}
+
+/* HERO */
+.hero{text-align:center;padding:90px 0}
+.badge{
+ background:rgba(59,130,246,.1);
+ color:var(--primary);
+ padding:8px 16px;border-radius:50px;font-size:.8rem;
+ border:1px solid rgba(59,130,246,.3);
+}
+h1{font-size:4rem;margin:20px 0}
+.gradient-text{
+ background:linear-gradient(90deg,#3b82f6,#a855f7);
+ -webkit-background-clip:text;-webkit-text-fill-color:transparent;
+}
+.hero p{color:var(--text-dim);max-width:600px;margin:auto 0 40px}
+.hero-btns{display:flex;justify-content:center;gap:15px}
+
+.btn-primary-lg,.btn-outline-lg{
+ padding:18px 35px;border-radius:8px;text-decoration:none;font-weight:600
+}
+.btn-primary-lg{background:var(--primary);color:#fff}
+.btn-outline-lg{border:1px solid #334155;color:var(--text-main)}
+
+/* MOCK WINDOW */
+.dashboard-preview{display:flex;justify-content:center;padding:60px 0}
+.window{
+ width:90%;max-width:900px;
+ background:var(--card-bg);
+ border:1px solid #2d3748;border-radius:12px
+}
+.window-header{
+ padding:15px;border-bottom:1px solid #2d3748;display:flex;align-items:center
+}
+.dots span{
+ width:10px;height:10px;border-radius:50%;
+ background:#334155;display:inline-block;margin-right:6px
+}
+.address-bar{
+ margin-left:20px;background:#0b0f1a;
+ padding:4px 15px;border-radius:4px;
+ font-size:.7rem;color:var(--text-dim)
+}
+.chart-container{
+ height:200px;display:flex;align-items:flex-end;
+ justify-content:space-around;padding:40px
+}
+.bar{
+ width:12%;background:rgba(59,130,246,.2);
+ border-radius:4px 4px 0 0
+}
+.bar.highlight{background:var(--primary)}
+
+.stats-grid{
+ display:grid;grid-template-columns:repeat(3,1fr);
+ border-top:1px solid #2d3748;padding:20px;text-align:center
+}
+.success{color:var(--success)}
+.danger{color:var(--danger)}
+
+/* FEATURES */
+.features{padding:100px 0}
+.features h2{text-align:center;margin-bottom:50px;font-size:2.5rem}
+.grid{display:grid;gap:30px;grid-template-columns:repeat(auto-fit,minmax(300px,1fr))}
+.feature-item{
+ background:var(--card-bg);
+ padding:40px;border-radius:16px;
+ border:1px solid #1f2937
+}
+.feature-item h3{color:var(--primary);margin-bottom:10px}
+
+/* FOOTER */
+footer{text-align:center;padding:40px;color:var(--text-dim)}
+</style>
 </head>
 
 <body>
 
 <nav class="navbar">
-    <div class="logo">BACKTEST<span>X</span></div>
-    <ul class="nav-links">
-        <li><a href="#features">Features</a></li>
-        <li><a href="#pricing">Pricing</a></li>
-        <li><a href="#contact" class="btn-primary">Get Started</a></li>
-        <button id="themeToggle" class="theme-toggle">☀️</button>
-    </ul>
+ <div class="logo">BACKTEST<span>X</span></div>
+ <ul class="nav-links">
+   <li><a href="#features">Features</a></li>
+   <li><a href="#pricing">Pricing</a></li>
+   <button id="themeToggle" class="theme-toggle">☀️</button>
+ </ul>
 </nav>
 
 <header class="hero">
-    <div class="container">
-        <span class="badge">New: Crypto Spot Backtesting Added</span>
-        <h1>Don't Guess. <br><span class="gradient-text">Just Backtest.</span></h1>
-        <p>Validate your trading strategies against a decade of institutional-grade market data. Precision execution. Zero lag.</p>
-
-        <div class="hero-btns">
-            <a href="#contact" class="btn-primary-lg">Start Free Trial</a>
-            <a href="#features" class="btn-outline-lg">Explore Features</a>
-        </div>
-    </div>
+ <div class="container">
+  <span class="badge">New: Crypto Spot Backtesting Added</span>
+  <h1>Don't Guess.<br><span class="gradient-text">Just Backtest.</span></h1>
+  <p>Validate strategies with decade-long institutional data.</p>
+  <div class="hero-btns">
+    <a href="#features" class="btn-primary-lg">Explore Features</a>
+    <a href="#contact" class="btn-outline-lg">Get Early Access</a>
+  </div>
+ </div>
 </header>
 
 <section class="dashboard-preview">
-    <div class="window">
-        <div class="window-header">
-            <div class="dots"><span></span><span></span><span></span></div>
-            <div class="address-bar">backtestx.in/dashboard</div>
-        </div>
-        <div class="window-content">
-            <div class="chart-container">
-                <div class="bar" style="height: 40%"></div>
-                <div class="bar" style="height: 60%"></div>
-                <div class="bar" style="height: 55%"></div>
-                <div class="bar" style="height: 80%"></div>
-                <div class="bar" style="height: 95%"></div>
-                <div class="bar highlight" style="height: 70%"></div>
-            </div>
-            <div class="stats-grid">
-                <div class="stat-card">
-                    <small>Profit Factor</small>
-                    <p>2.84</p>
-                </div>
-                <div class="stat-card">
-                    <small>Win Rate</small>
-                    <p class="success">64.2%</p>
-                </div>
-                <div class="stat-card">
-                    <small>Max Drawdown</small>
-                    <p class="danger">-3.1%</p>
-                </div>
-            </div>
-        </div>
-    </div>
+ <div class="window">
+  <div class="window-header">
+   <div class="dots"><span></span><span></span><span></span></div>
+   <div class="address-bar">backtestx.in/dashboard</div>
+  </div>
+  <div class="chart-container">
+   <div class="bar" style="height:40%"></div>
+   <div class="bar" style="height:60%"></div>
+   <div class="bar" style="height:55%"></div>
+   <div class="bar highlight" style="height:85%"></div>
+  </div>
+ </div>
 </section>
 
 <section id="features" class="features">
-    <div class="container">
-        <h2>Built for Serious Traders</h2>
-        <div class="grid">
-            <div class="feature-item">
-                <div class="icon">📊</div>
-                <h3>Candle-Level Accuracy</h3>
-                <p>True candle-by-candle simulation for realistic slippage and execution.</p>
-            </div>
-            <div class="feature-item">
-                <div class="icon">🌍</div>
-                <h3>Multi-Asset Support</h3>
-                <p>Backtest Forex, Stocks, Indices and Crypto in one platform.</p>
-            </div>
-            <div class="feature-item">
-                <div class="icon">⚡</div>
-                <h3>Fast Cloud Engine</h3>
-                <p>Run thousands of strategy tests in seconds with our optimized engine.</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section id="pricing" class="pricing">
-    <div class="container">
-        <h2>Simple Pricing</h2>
-        <p>Free to start. Upgrade anytime.</p>
-    </div>
-</section>
-
-<section id="contact" class="contact">
-    <div class="container">
-        <h2>Get Early Access</h2>
-        <p>Backtestx Android app launching soon.</p>
-    </div>
+ <div class="container">
+  <h2>Built for Serious Traders</h2>
+  <div class="grid">
+   <div class="feature-item">
+    <h3>Candle-Level Accuracy</h3>
+    <p>True candle-by-candle simulation.</p>
+   </div>
+   <div class="feature-item">
+    <h3>Multi-Asset Support</h3>
+    <p>Forex, Stocks, Indices, Crypto.</p>
+   </div>
+   <div class="feature-item">
+    <h3>Fast Cloud Engine</h3>
+    <p>Thousands of tests in seconds.</p>
+   </div>
+  </div>
+ </div>
 </section>
 
 <footer>
-    <p>&copy; 2026 Backtestx Engine. All rights reserved. Trading involves risk.</p>
+ © 2026 Backtestx Engine. Trading involves risk.
 </footer>
 
 <script>
-const btn = document.getElementById("themeToggle");
-
-if (localStorage.getItem("theme") === "light") {
-    document.body.classList.add("light");
-    btn.textContent = "🌙";
+const btn=document.getElementById("themeToggle");
+if(localStorage.getItem("theme")==="light"){
+ document.body.classList.add("light");
+ btn.textContent="🌙";
 }
-
-btn.onclick = () => {
-    document.body.classList.toggle("light");
-    const isLight = document.body.classList.contains("light");
-    localStorage.setItem("theme", isLight ? "light" : "dark");
-    btn.textContent = isLight ? "🌙" : "☀️";
+btn.onclick=()=>{
+ document.body.classList.toggle("light");
+ const light=document.body.classList.contains("light");
+ localStorage.setItem("theme",light?"light":"dark");
+ btn.textContent=light?"🌙":"☀️";
 };
 </script>
 
 </body>
 </html>
+
