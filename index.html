@@ -7,107 +7,120 @@
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
 </head>
+
 <body>
 
-    <nav class="navbar">
-        <div class="logo">BACKTEST<span>X</span></div>
-        <ul class="nav-links">
-            <li><a href="#features">Features</a></li>
-            <li><a href="#pricing">Pricing</a></li>
-            <li><a href="login.html" class="btn-secondary">Login</a></li>
-            <li><a href="login.html" class="btn-primary">Get Started</a></li>
-            <button id="themeToggle" class="theme-toggle"></button>
-        </ul>
-    </nav>
+<nav class="navbar">
+    <div class="logo">BACKTEST<span>X</span></div>
+    <ul class="nav-links">
+        <li><a href="#features">Features</a></li>
+        <li><a href="#pricing">Pricing</a></li>
+        <li><a href="#contact" class="btn-primary">Get Started</a></li>
+        <button id="themeToggle" class="theme-toggle">☀️</button>
+    </ul>
+</nav>
 
-    <header class="hero">
-        <div class="container">
-            <span class="badge">New: Crypto Spot Backtesting Added</span>
-            <h1>Don't Guess. <br><span class="gradient-text">Just Backtest.</span></h1>
-            <p>Validate your trading strategies against a decade of institutional-grade market data. Precision execution. Zero lag.</p>
-            
-            <div class="hero-btns">
-                <a href="login.html" class="btn-primary-lg">Start Free Trial</a>
-                <a href="#" class="btn-outline-lg">Watch Demo</a>
-            </div>
+<header class="hero">
+    <div class="container">
+        <span class="badge">New: Crypto Spot Backtesting Added</span>
+        <h1>Don't Guess. <br><span class="gradient-text">Just Backtest.</span></h1>
+        <p>Validate your trading strategies against a decade of institutional-grade market data. Precision execution. Zero lag.</p>
+
+        <div class="hero-btns">
+            <a href="#contact" class="btn-primary-lg">Start Free Trial</a>
+            <a href="#features" class="btn-outline-lg">Explore Features</a>
         </div>
-    </header>
+    </div>
+</header>
 
-    <section class="dashboard-preview">
-        <div class="window">
-            <div class="window-header">
-                <div class="dots"><span></span><span></span><span></span></div>
-                <div class="address-bar">backtestx.com/app/dashboard</div>
+<section class="dashboard-preview">
+    <div class="window">
+        <div class="window-header">
+            <div class="dots"><span></span><span></span><span></span></div>
+            <div class="address-bar">backtestx.in/dashboard</div>
+        </div>
+        <div class="window-content">
+            <div class="chart-container">
+                <div class="bar" style="height: 40%"></div>
+                <div class="bar" style="height: 60%"></div>
+                <div class="bar" style="height: 55%"></div>
+                <div class="bar" style="height: 80%"></div>
+                <div class="bar" style="height: 95%"></div>
+                <div class="bar highlight" style="height: 70%"></div>
             </div>
-            <div class="window-content">
-                <div class="chart-container">
-                    <div class="bar" style="height: 40%"></div>
-                    <div class="bar" style="height: 60%"></div>
-                    <div class="bar" style="height: 55%"></div>
-                    <div class="bar" style="height: 80%"></div>
-                    <div class="bar" style="height: 95%"></div>
-                    <div class="bar highlight" style="height: 70%"></div>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <small>Profit Factor</small>
+                    <p>2.84</p>
                 </div>
-                <div class="stats-grid">
-                    <div class="stat-card">
-                        <small>Profit Factor</small>
-                        <p>2.84</p>
-                    </div>
-                    <div class="stat-card">
-                        <small>Win Rate</small>
-                        <p class="success">64.2%</p>
-                    </div>
-                    <div class="stat-card">
-                        <small>Max Drawdown</small>
-                        <p class="danger">-3.1%</p>
-                    </div>
+                <div class="stat-card">
+                    <small>Win Rate</small>
+                    <p class="success">64.2%</p>
+                </div>
+                <div class="stat-card">
+                    <small>Max Drawdown</small>
+                    <p class="danger">-3.1%</p>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <section id="features" class="features">
-        <div class="container">
-            <h2>Built for Serious Quants</h2>
-            <div class="grid">
-                <div class="feature-item">
-                    <div class="icon">📊</div>
-                    <h3>Candle-Level Accuracy</h3>
-                    <p>We don't use tick candles. We use candle by canlde data for true slippage simulation.</p>
-                </div>
-                <div class="feature-item">
-                    <div class="icon">🌍</div>
-                    <h3>Multi-Asset Support</h3>
-                    <p>Backtest across Forex, Stocks, Indices and Crypto simultaneously to find correlations.</p>
-                </div>
-                <div class="feature-item">
-                    <div class="icon">⚡</div>
-                    <h3>Cloud Execution</h3>
-                    <p>Run 10,000 iterations in seconds using our proprietary distributed engine.</p>
-                </div>
+<section id="features" class="features">
+    <div class="container">
+        <h2>Built for Serious Traders</h2>
+        <div class="grid">
+            <div class="feature-item">
+                <div class="icon">📊</div>
+                <h3>Candle-Level Accuracy</h3>
+                <p>True candle-by-candle simulation for realistic slippage and execution.</p>
+            </div>
+            <div class="feature-item">
+                <div class="icon">🌍</div>
+                <h3>Multi-Asset Support</h3>
+                <p>Backtest Forex, Stocks, Indices and Crypto in one platform.</p>
+            </div>
+            <div class="feature-item">
+                <div class="icon">⚡</div>
+                <h3>Fast Cloud Engine</h3>
+                <p>Run thousands of strategy tests in seconds with our optimized engine.</p>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <footer style="text-align: center; padding: 40px; color: var(--text-dim); font-size: 0.9rem; border-top: 1px solid #1f2937;">
-        <p>&copy; 2026 Backtestx Engine. All rights reserved. Trading involves risk.</p>
-    </footer>
+<section id="pricing" class="pricing">
+    <div class="container">
+        <h2>Simple Pricing</h2>
+        <p>Free to start. Upgrade anytime.</p>
+    </div>
+</section>
+
+<section id="contact" class="contact">
+    <div class="container">
+        <h2>Get Early Access</h2>
+        <p>Backtestx Android app launching soon.</p>
+    </div>
+</section>
+
+<footer>
+    <p>&copy; 2026 Backtestx Engine. All rights reserved. Trading involves risk.</p>
+</footer>
+
 <script>
-    const btn = document.getElementById("themeToggle");
+const btn = document.getElementById("themeToggle");
 
-    if (localStorage.getItem("theme") === "light") {
-        document.body.classList.add("light");
-        btn.textContent = "🌙";
-    } else {
-        btn.textContent = "☀️";
-    }
+if (localStorage.getItem("theme") === "light") {
+    document.body.classList.add("light");
+    btn.textContent = "🌙";
+}
 
-    btn.onclick = () => {
-        document.body.classList.toggle("light");
-        const isLight = document.body.classList.contains("light");
-        localStorage.setItem("theme", isLight ? "light" : "dark");
-        btn.textContent = isLight ? "🌙" : "☀️";
-    };
+btn.onclick = () => {
+    document.body.classList.toggle("light");
+    const isLight = document.body.classList.contains("light");
+    localStorage.setItem("theme", isLight ? "light" : "dark");
+    btn.textContent = isLight ? "🌙" : "☀️";
+};
 </script>
 
 </body>
